@@ -1,4 +1,9 @@
 #https://www.tensorflow.org/tutorials/keras/overfit_and_underfit
+bigger_history = bigger_model.fit(train_data, train_labels,
+                                  epochs=20,
+                                  batch_size=512,
+                                  validation_data=(test_data, test_labels),
+                                  verbose=2)
 
 def plot_history(histories, key='binary_crossentropy'):
   plt.figure(figsize=(16,10))
